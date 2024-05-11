@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bottom {
+  position: relative
+  top: 150vh;
+  width: 100%;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+  
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    gap: 20px;
+    
+}
+
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.container .box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #fff);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+
+.container .box::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #fff);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%
+    {transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container .box .content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 95%;
+    height: 95%;
+    
+    
+    inset: 1px;
+    border-radius: 16px;
+    z-index: 1;
+    background: #2e2e2e;
+
+}
+
+.container .box .content .icon
+{
+   color: var(--clr);
+   width: 80px;
+   height: 80px;
+   box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 6px var(--clr);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2.5em;
+   background: #2e2e2e;
+   transition: 0.5s ease-in-out;
+
+
+}
+
+.container .box:hover .content .icon{
+    background: var(--clr);
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px var(--clr);
+
+}
+
+.container .box .content .text h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+
+
+}
+
+.container .box:hover .content .text h3{
+    color: #2e2e2e;
+}
+
+.container .box .content .text p{
+    color: #999;
+    transition: 0.5s ease-in-out;
+}
+<
+.container .box:hover .content .text p{
+    color: #2e2e2e;
+}
+
+.container .box .content .text a{
+    position: relative;
+    background: var(--clr);
+    color: #2e2e2e;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .box:hover .content .text a{
+    background: #2e2e2e;
+    color: var(--clr);
+}
+
+
